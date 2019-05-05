@@ -13,7 +13,7 @@ export function authUser(type, userData) {
   console.log(type)
   return dispatch => {
     return new Promise((resolve, reject) => {
-      return apiCall('post', `http://localhost:2000/api/auth/${type}`, userData)
+      return apiCall('post', `https://futura-server.herokuapp.com/api/auth/${type}`, userData)
         .then(({token, ...user}) => {
           localStorage.setItem('token', token);
           setAuthorizationToken(token);
