@@ -9,7 +9,7 @@ export const loadMessages = messages => ({
 
 export const fetchMessages = () => {
   return dispatch => {
-    return apiCall('get', 'https://futura-server.herokuapp.com:2000/api/messages')
+    return apiCall('get', 'https://futura-server.herokuapp.com/api/messages')
       .then(res => {
         dispatch(loadMessages(res));
       })
@@ -24,7 +24,7 @@ export const remove = messageId => ({
 
 export const removeMessage = (userId, messageId) => {
   return dispatch => {
-    return apiCall('delete', `https://futura-server.herokuapp.com:2000/api/users/${userId}/messages/${messageId}`)
+    return apiCall('delete', `https://futura-server.herokuapp.com/api/users/${userId}/messages/${messageId}`)
       .then(() => dispatch(remove(messageId)))
       .catch(err => dispatch(addError(err.message)));
   }
@@ -33,7 +33,7 @@ export const removeMessage = (userId, messageId) => {
 export const postNewMessage = text => (dispatch, getState) => {
   let {currentUser} = getState()
   const id = currentUser.user.id;
-  return apiCall('post', `https://futura-server.herokuapp.com:2000/api/users/${id}/messages`, {text})
+  return apiCall('post', `https://futura-server.herokuapp.com/api/users/${id}/messages`, {text})
     .then(res =>{
 
     })
