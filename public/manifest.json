@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/src/images/undraw_japan_ubgk__1557073926_41238.png",
+      "src": "../src/images/undraw_japan_ubgk__1557073926_41238.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/src/images/undraw_japan_ubgk__1557073926_41238__1557073926_73565.png",
+      "src": "../src/images/undraw_japan_ubgk__1557073926_41238__1557073926_73565.png",
       "type": "image/png",
       "sizes": "512x512"
     }
